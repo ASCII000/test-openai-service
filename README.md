@@ -20,8 +20,8 @@ Os comandos serão chamados via text-box da plataforma.
 ```
 
 # Agenda
-1° Fazer um sistema para importar quaisquer comandos build-in python para o bot.
-2° Converter o bot para sistema handler para mais interações.
-3° Lançar uma previa publica do bot
+1° Fazer um sistema para importar quaisquer comandos build-in python para o bot. \n
+2° Converter o bot para sistema handler para mais interações. \n
+3° Lançar uma previa publica do bot \n
 
 ©r4n_emerson
