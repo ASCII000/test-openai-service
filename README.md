@@ -21,12 +21,12 @@ Os comandos serão chamados via text-box da plataforma.
 ### Discord Python
 Utilizado para conectar a aplicação com a API do discord, necessario para criar a aplicação e gerar seu token, disponivel em [Discord Developers](https://discord.com/developers)
 
-> pip install discord.py
+> - pip install discord.py
 
 ### OpenAI
 Necessario para as interações de criação de respostas HTTP da api gratuita da OpenAI, necessario para gerar o token de liberação de uso da api, disponivel em [Openai API](https://openai.com/blog/openai-api)
 
-> pip install openai
+> - pip install openai
 
 ###Arquivo de config
 O seu arquivo de config.json deve se parecer com isso.
@@ -41,7 +41,7 @@ O seu arquivo de config.json deve se parecer com isso.
 
 # Em breve
 1. Fazer um sistema para importar quaisquer comandos build-in python para o bot.
-_1.1 Organizar o README github para melhor entendimento.
+  - 1.1 Organizar o README github para melhor entendimento.
 2. Converter o bot para sistema handler para mais interações.
 3. Lançar uma previa publica do bot
 
