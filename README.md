@@ -28,7 +28,7 @@ Necessario para as interações de criação de respostas HTTP da api gratuita d
 
 > - pip install openai
 
-###Arquivo de config
+### Arquivo de config
 O seu arquivo de config.json deve se parecer com isso.
 
 ```
