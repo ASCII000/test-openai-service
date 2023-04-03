@@ -15,7 +15,6 @@ Os comandos serão chamados via text-box da plataforma.
 /img (parâmetro)
 ```
 ![exemple2](https://cdn.discordapp.com/attachments/1089276079329521856/1092449433393844436/image.png)
-```
 
 ### Por prefixo.
 ```
