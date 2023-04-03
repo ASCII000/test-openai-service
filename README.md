@@ -1,8 +1,7 @@
 # Mojang_BOT Discord.Py
 
 Um bot simples feito para a plataforma de comunicação Discord para usar comandos da API openai.
->Feito na biblioteca discord.py
->API OpenAI utilizada
+>Feito nas bibliotecas discord.py e OpenAI.
 
 ## Comandos
 Os comandos serão chamados via text-box da plataforma.
