@@ -9,11 +9,11 @@ Os comandos serão chamados via text-box da plataforma.
 ### Slash
 ```
 /chatgpt (pergunta)
-
+```
 ![exemple1](https://media.discordapp.net/attachments/1089276079329521856/1092449167772749864/image.png)
-
+```
 /img (parâmetro)
-
+```
 ![exemple2](https://cdn.discordapp.com/attachments/1089276079329521856/1092449433393844436/image.png)
 ```
 
