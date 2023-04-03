@@ -7,13 +7,13 @@ Um bot simples feito para a plataforma de comunicação Discord para usar comand
 ## Comandos
 Os comandos serão chamados via text-box da plataforma.
 
-###Slash
+### Slash
 ```
 /chatgpt (pergunta)
 /img (parâmetro)
 ```
 
-###Por prefixo.
+### Por prefixo.
 ```
 &chatgpt (pergunta)
 &img (parâmetro)
