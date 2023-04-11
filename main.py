@@ -22,36 +22,33 @@ async def on_ready():
     print(f'Login {bot.user}!')
     
     await bot.change_presence(status=discord.Status.online, activity=rich_presence)
+    
+    #SINCRONIZA OS COMANDOS SLASH
     try:
         synced = await bot.tree.sync()
         print(f"Comando sincronizados.")
     except Exception as e:
         print(e)
+    else:
+        print("Algo deu errado")
 
-#COMANDOS
+#COMANDOS PREFIXO
 
 #COMANDO CHATGPT
 @bot.command(name='chatgpt')
-async def chatgpt(ctx, pergunta):
-    resposta = op.ask_gpt(pergunta +' resuma em uma frase')
+async def chatgpt(ctx, comando):
+    resposta = op.ask_gpt(ctx.message.content)
+    print(resposta)
     embed=discord.Embed(title="ChatGPT",
                         description=f"**R**: {resposta}", color=0x30df3b)
     embed.set_author(name="OpenAI",
                     icon_url="http://cruckz.com/wp-content/uploads/2023/01/chat-gpt-alternatives.jpg")
-    embed.set_footer(text=f"{ctx.author.name}: {pergunta}")
+    embed.set_footer(text=f"{ctx.author.name}: {ctx.message.content}")
                 
     await ctx.channel.send(embed=embed)
 
-@bot.tree.command(name='chatgpt', description='Faça uma pergunta resumida para o chatgpt')
-async def chatgpt(interaction: discord.Interaction, pergunta: str):
-    resposta = op.ask_gpt(pergunta +' resuma em uma frase')
-    embed=discord.Embed(title="ChatGPT",
-                        description=f"**R**: {resposta}", color=0x30df3b)
-    embed.set_author(name="OpenAI",
-                    icon_url="http://cruckz.com/wp-content/uploads/2023/01/chat-gpt-alternatives.jpg")
-    embed.set_footer(text=f"{interaction.user.name}: {pergunta}")
-                
-    await interaction.response.send_message(embed=embed)
+####### SLASH COMMANDS
+#COMANDO CHATGPT
 
 #COMANDO GERADOR DE IMG
 @bot.tree.command(name='img', description='Contexto')
@@ -79,11 +76,15 @@ async def img(interaction: discord.Interaction, question: str):
 #BEM VINDO
 @bot.event
 async def on_member_join(Member):
+    mensagem = op.ask_gpt(
+        'Faça uma mensagem de bem vindo para o grupo Mojagaum para o novo usuario ' + Member.name
+        )
+
     if Member.bot:
         return
     embed=discord.Embed(
-        title=f"**Bem vindo(a) ao servidor** {Member.name}!",
-        description=f"<@{Member.id}> Para desbloquear o servidor vá para o chat <#884228840447152199>",
+        title=f"Bem vindo(a) **{Member.name}**",
+        description=f"{mensagem}\n\n**Desbloqueie o servidor:** <#884228840447152199>",
         color=0x2d80cd)
     embed.set_author(
         name="╭──MOJANGÃO──╮",
@@ -91,8 +92,7 @@ async def on_member_join(Member):
     embed.set_thumbnail(
         url=f"{Member.avatar}")
     embed.set_image(url='https://media.tenor.com/PQgWghXKP0MAAAAC/games-eduuuu.gif')
-    
-    await client.get_channel(884271494316830720).send(embed=embed)
+    await bot.get_channel(884271494316830720).send(f'<@{Member.id}>',embed=embed)
     print(f'{Member} Se juntou')
 
 #RUN
