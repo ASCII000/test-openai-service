@@ -1,4 +1,4 @@
-# Mojangaum Discord BOT
+# OpenAI API
 
 Um bot simples feito para a plataforma de comunicação Discord para usar comandos da API openai.
 >Feito nas bibliotecas discord.py e OpenAI.
